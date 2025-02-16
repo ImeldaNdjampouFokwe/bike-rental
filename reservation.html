@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reservation - Salon de Coiffure</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #f5e1c8;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="assets/images/logo_site.png" alt="Logo" width="50"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html">L'Équipe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-dark text-light" href="reservation.html">Prendre un rendez-vous</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="reservation py-5 text-center" style="background-color: #f5e1c8;">
+        <div class="container">
+            <h2 class="fw-bold">Prendre un rendez-vous</h2>
+            <hr class="mx-auto" style="width: 50px; height: 3px; background-color: black;">
+            <div class="row mt-4 justify-content-center">
+                <div class="col-md-10 p-4" style="background-color: white; border: 1px solid black;">
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <label for="date">Sélectionnez une date</label>
+                            <input type="date" id="date" class="form-control" required>
+                            <button class="btn btn-dark mt-3" id="checkAvailability">Vérifiez les disponibilités</button>
+                            <div id="availabilityList" class="mt-3">
+                                <div class="mb-3">
+                                    <label for="specialiste">Spécialiste :</label>
+                                    <select id="specialiste" name="specialiste" class="form-control" required>
+                                        <option value="">Sélectionner un spécialiste</option>
+                                        <option value="Marie">Marie</option>
+                                        <option value="Lucas">Lucas</option>
+                                        <option value="Jean">Jean</option>
+                                        <option value="Anie">Anie</option>
+                                        <option value="Emma">Emma</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="heure">Heure :</label>
+                                    <select id="heure" name="heure" class="form-control" required>
+                                        <option value="">Sélectionner une heure</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-start">
+                            <h5>Informations supplémentaires</h5>
+                            <form id="reservationForm">
+                                <div class="mb-3">
+                                    <label for="service">Service :</label>
+                                    <select id="service" name="service" class="form-control" required>
+                                        <option value="">Sélectionner</option>
+                                        <option value="Coiffure">Coiffure</option>
+                                        <option value="Balayage">Balayage</option>
+                                        <option value="Trichologie">Trichologie</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="nom">Nom :</label>
+                                    <input type="text" id="nom" name="nom" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email">Email :</label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone">Téléphone :</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn btn-success">Soumettre</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4" style="background-color: #3a3a3a; color: white;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4"><h5>📞 Contacts</h5><p>Tél : 1 (354) 654-9874</p><p>Email : expertcoiffure@gmail.com</p></div>
+                <div class="col-md-4"><h5>📍 Adresse</h5><p>90 Boulevard Gréber, Gatineau, Québec, J8Y 4B0</p></div>
+                <div class="col-md-4"><h5>🕒 Heures d'ouverture</h5><p>Lundi - Vendredi : 10h - 20h</p><p>Samedi - Dimanche : Fermé</p></div>
+            </div>
+        </div>
+        <div class="text-center py-3">© 2025 Copyright: Les experts de la coiffure</div>
+    </footer>
+
+    
+    <script>
+        document.getElementById("reservationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            window.location.href = "confirmation.html";
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

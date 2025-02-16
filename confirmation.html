@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de réservation - Salon de Coiffure</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #f5e1c8;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="assets/images/logo_site.png" alt="Logo" width="50"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html">L'Équipe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-dark text-light" href="reservation.html">Prendre un rendez-vous</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <section class="confirmation py-5 text-center" style="background-color: #f5e1c8;">
+        <div class="container">
+            <h2 class="fw-bold">Confirmation du rendez-vous</h2>
+            <hr class="mx-auto" style="width: 50px; height: 3px; background-color: black;">
+            <div class="row mt-4 justify-content-center">
+                <div class="col-md-8 p-4" style="background-color: white; border: 1px solid black;">
+                    <p><strong>Nom :</strong> <span id="confirmNom"></span></p>
+                    <p><strong>Email :</strong> <span id="confirmEmail"></span></p>
+                    <p><strong>Date :</strong> <span id="confirmDate"></span></p>
+                    <p><strong>Service :</strong> <span id="confirmService"></span></p>
+                    <p><strong>Spécialiste :</strong> <span id="confirmSpecialiste"></span></p>
+                    <p><strong>Heure :</strong> <span id="confirmHeure"></span></p>
+                    <p class="text-success"><strong>Un message de confirmation a été envoyé à votre adresse courriel.</strong></p>
+                    <div class="mt-4">
+                        <a href="index.html" class="btn btn-primary">Retour à l'accueil</a>
+                        <a href="reservation.html" class="btn btn-secondary">Modifier la réservation</a>
+                        <a href="#" class="btn btn-danger">Annuler la réservation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="py-4" style="background-color: #3a3a3a; color: white;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4"><h5>📞 Contacts</h5><p>Tél : 1 (354) 654-9874</p><p>Email : expertcoiffure@gmail.com</p></div>
+                <div class="col-md-4"><h5>📍 Adresse</h5><p>90 Boulevard Gréber, Gatineau, Québec, J8Y 4B0</p></div>
+                <div class="col-md-4"><h5>🕒 Heures d'ouverture</h5><p>Lundi - Vendredi : 10h - 20h</p><p>Samedi - Dimanche : Fermé</p></div>
+            </div>
+        </div>
+        <div class="text-center py-3">© 2025 Copyright: Les experts de la coiffure</div>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("confirmNom").textContent = localStorage.getItem("nom") || "Non spécifié";
+            document.getElementById("confirmEmail").textContent = localStorage.getItem("email") || "Non spécifié";
+            document.getElementById("confirmDate").textContent = localStorage.getItem("date") || "Non spécifié";
+            document.getElementById("confirmService").textContent = localStorage.getItem("service") || "Non spécifié";
+            document.getElementById("confirmSpecialiste").textContent = localStorage.getItem("specialiste") || "Non spécifié";
+            document.getElementById("confirmHeure").textContent = localStorage.getItem("heure") || "Non spécifié";
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
